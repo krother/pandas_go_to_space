@@ -39,16 +39,16 @@ jobs:
       - name: Install requirements and package
         run: |
           python -m pip install -U pip
-          python -m pip install -r docs/requirements.txt
+          python -m pip install -r requirements.txt
       - name: Setup Pages
         uses: actions/configure-pages@v1
       - name: Build HTML
         run: make html
-        working-directory: docs/
+        working-directory: /
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: docs/_build/html
+          path: _build/html
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
