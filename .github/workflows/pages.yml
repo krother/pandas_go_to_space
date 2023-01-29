@@ -44,7 +44,6 @@ jobs:
         uses: actions/configure-pages@v1
       - name: Build HTML
         run: make html
-        working-directory: /
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
