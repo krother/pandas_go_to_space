@@ -4,6 +4,8 @@ Select Rows and Columns
 Find your Crew
 --------------
 
+.. figure:: crew.png
+
 As a spaceship captain, you are nothing without your crew.
 There is a tradition in the Data Starfleet:
 Your five senior officers are hiding among the regular crew members, until their captain finds them.
