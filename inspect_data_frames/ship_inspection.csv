@@ -1,0 +1,19 @@
+station,status,life support [%],life forms,security
+bridge,OK,100,1,red
+reactor,OK,0,0,red
+engines,OK,0,0,red
+shuttle bay,OK,100,0,blue
+bamboo grove,OK,100,15783,green
+waterfall,under construction,99,15,green
+shield generator,OK,100,0,orange
+quarters,OK,100,0,green
+cargo bay,OK,100,0,green
+quarantine,OK,100,0,orange
+medical,OK,100,0,blue
+comms,OK,100,0,orange
+laser control,OK,100,0,orange
+airlock,OK,100,0,blue
+life support,OK,100,0,orange
+hyperdrive,OK,0,0,orange
+bar,OK,100,0,green
+computer core,OK,100,0,red

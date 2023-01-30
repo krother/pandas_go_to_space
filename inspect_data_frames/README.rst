@@ -1,43 +1,105 @@
 Inspect DataFrames
 ==================
 
-These are few but very important diagnostic commands
+Check all Stations
+------------------
 
-Number of Rows and Columns
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. card::
+   :shadow: lg
+
+   .. figure:: corridor.jpeg
+
+   Before you can take off, you need to check whether your ship is in a good shape.
+   The **Data Starfleet inspection procedure** is to check all stations of the ship,
+   and see whether there is anything that requires your attention.
+   The ships computer has prepared a **tabular report** already.
+   All you need to do is to see what is in the table.
+
+   Load the report :download:`ship_inspection.csv` into a `DataFrame` and check the following commands.
+
+Inspect a few rows
+------------------
+
+You might want to see a few rows. 
+In Jupyter, you can do that by typing the variable name in a cell. 
+In a Python script, you could `print(df)`.
+But you could use the more explicit methods `head()` and `tail()`:
 
 .. code:: python
 
-   import seaborn as sns
+   df.head(3)
+   df.tail(3)
 
-   df = sns.load_dataset('penguins')
+.. dropdown:: Can I call `head()` and `tail()` without a number?
+   :animate: fade-in
+
+   Yes. The default number if you leave away the argument is 5.
+
+Number of rows and columns
+--------------------------
+
+The shape of a `DataFrame` is alway a tuple of two integers `(rows, columns)`.
+
+.. code:: python
 
    df.shape
 
+.. dropdown:: When do I need to check `df.shape`?
+   :animate: fade-in
+
+   `df.shape` is your most important command when debugging.
+   If the shape is not what you expect, everything is wrong.
+
 Data Types
-~~~~~~~~~~
+----------
+
+When you load data from a CSV file, `pandas` automatically infers data types.
+Sometimes a single wrong value converts a numerical column to strings.
 
 .. code:: python
 
    df.dtypes
 
-Generic Overview
-~~~~~~~~~~~~~~~~
+.. dropdown:: What does the type `object` mean?
+   :animate: fade-in
 
-Data types + number of entries for each column + memory size
+   The type `object` usually means that the column contains strings.
+
+Generic Overview
+----------------
+
+You can check data types, the number of entries for each column and memory size with a single command:
 
 .. code:: python
 
    df.info()
 
-Unique Value Count
-~~~~~~~~~~~~~~~~~~
+
+Unique Values
+-------------
+
+With categorical columns, you might want to know, what are the most frequent values or what different values occur.
+This also helps you to identify some data errors.
 
 .. code:: python
 
-   df['species'].value_counts()
+   df['column_name'].value_counts()
 
-Unique Values
-~~~~~~~~~~~~~
+If you are not interested in the count, check the unique values:
 
-df[‘island’].unique()
+.. code:: python
+
+   df['column_name'].unique()
+
+
+.. figure:: inspect.jpeg
+
+Challenge
+---------
+
+**Inspect the report :download:`ship_inspection.csv` to find out:**
+
+- How many life forms are there on the bridge?
+- How many stations does the ship have?
+- How many different security levels are there?
+- There is one life support value that is neither 0 or 100%. How much is it? 
