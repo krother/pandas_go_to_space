@@ -112,13 +112,3 @@ Enter your data. Type the code:
     df
 
 Execute the code with the **‘play’** button on top or press **Shift-Enter**.
-
-
-.. article-info::
-    :avatar: images/ebp-logo.png
-    :avatar-link: https://executablebooks.org/
-    :avatar-outline: muted
-    :author: Executable Books
-    :date: Jul 24, 2021
-    :read-time: 5 min read
-    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
