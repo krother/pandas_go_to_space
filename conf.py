@@ -25,10 +25,20 @@ language = 'ls'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
+html_theme_path = ['themes']
 html_static_path = ['_static']
 html_logo = "_static/banner_wide.svg"
 html_favicon = "_static/logo.svg"
 
+
 html_theme_options = {
     "sidebar_hide_name": True,
+    "source_repository": "https://github.com/krother/pandas_go_to_space/",
+    "source_branch": "main",
+    "source_directory": "/",
+
+    "light_css_variables": {
+        # see https://github.com/pradyunsg/furo/tree/main/src/furo/assets/styles/variables
+        "color-card-background": "#ffbb88",
+    },
 }
