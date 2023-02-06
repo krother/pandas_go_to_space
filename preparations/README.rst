@@ -7,6 +7,7 @@ Boarding
 
 .. figure:: panda_airlock.png
 
+
 .. card::
     :shadow: lg
 
