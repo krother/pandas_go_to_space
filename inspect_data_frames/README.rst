@@ -4,10 +4,10 @@ Inspect DataFrames
 Check all Stations
 ------------------
 
+.. figure:: corridor.jpeg
+
 .. card::
    :shadow: lg
-
-   .. figure:: corridor.jpeg
 
    Before you can take off, you need to check whether your ship is in a good shape.
    The **Data Starfleet inspection procedure** is to check all stations of the ship,
@@ -16,6 +16,19 @@ Check all Stations
    All you need to do is to see what is in the table.
 
    Load the report :download:`ship_inspection.csv` into a `DataFrame` and check the following commands.
+
+----
+
+What is a DataFrame?
+--------------------
+
+The class `pandas.DataFrame` is the central data structure in `pandas`.
+In most aspects, you can think of it as a table with row and column labels, also called `Index`.
+Each column has the type `pandas.Series`.
+
+.. figure:: dataframe.svg
+
+----
 
 Inspect a few rows
 ------------------
@@ -35,6 +48,8 @@ But you could use the more explicit methods `head()` and `tail()`:
 
    Yes. The default number if you leave away the argument is 5.
 
+----
+
 Number of rows and columns
 --------------------------
 
@@ -49,6 +64,8 @@ The shape of a `DataFrame` is alway a tuple of two integers `(rows, columns)`.
 
    `df.shape` is your most important command when debugging.
    If the shape is not what you expect, everything is wrong.
+
+----
 
 Data Types
 ----------
@@ -65,6 +82,8 @@ Sometimes a single wrong value converts a numerical column to strings.
 
    The type `object` usually means that the column contains strings.
 
+----
+
 Generic Overview
 ----------------
 
@@ -74,6 +93,8 @@ You can check data types, the number of entries for each column and memory size 
 
    df.info()
 
+
+----
 
 Unique Values
 -------------
@@ -91,15 +112,19 @@ If you are not interested in the count, check the unique values:
 
    df['column_name'].unique()
 
+----
 
 .. figure:: inspect.jpeg
 
 Challenge
 ---------
 
-**Inspect the report :download:`ship_inspection.csv` to find out:**
+.. card::
+   :shadow: lg
 
-- How many life forms are there on the bridge?
-- How many stations does the ship have?
-- How many different security levels are there?
-- There is one life support value that is neither 0 or 100%. How much is it? 
+   Inspect the report :download:`ship_inspection.csv` to find out:
+
+   - How many life forms are there on the bridge?
+   - How many stations does the ship have?
+   - How many different security levels are there?
+   - There is one life support value that is neither 0 or 100%. How much is it? 
