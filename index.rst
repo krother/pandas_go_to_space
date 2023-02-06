@@ -9,12 +9,12 @@
 .. card::
    :shadow: lg
    
-   *In the endless voids of space, there is a civilization of pandas.
+   In the endless voids of space, there is a civilization of pandas.
    They are peaceful explorers and skilled data scientists.
    The pandas send out their fleet
    to travel the stars,
    to discover new worlds
-   and new tastes of bamboo no creature has tasted before.*
+   and new tastes of bamboo no creature has tasted before.
 
 .. figure:: planet.png
 
@@ -34,14 +34,12 @@ Contents
    :maxdepth: 1
 
    preparations/README.rst
-   inspect_data_frames/README.rst
    read_write_data/README.rst
+   inspect_data_frames/README.rst
    create_data_frames/README.rst
    select_rows_and_columns/README.rst
    edit_columns/README.rst
    data_wrangling/README.rst
-   navigation/README.rst
-   hyperjump/README.rst
    plotting_maps/README.rst
    first_steps/README.rst
    links.rst
