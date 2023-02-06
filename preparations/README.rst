@@ -5,16 +5,21 @@ Preparations
 Boarding
 --------
 
+.. figure:: panda_airlock.png
+
 .. card::
     :shadow: lg
 
-    .. figure:: panda_airlock.png
+    You enter your spaceship through the airlock and take off your helmet.
+    As the captain, it is your duty and privilege to be the first panda on board.
+    There is an eerie silence. The ship is sleeping.
+    Only an occasional hum from a life support console can be heard.
+    You step through the corridors without a sound, thanks to your soft paws.
+    You finally reach the bridge and the captains seat. Time to boot your spaceships computer.
 
-    You enter the spaceship through an airlock. As the captain, it is your duty and privilege to be the first panda on board. There is an eerie silence. The ship is sleeping. Only an occasional hum from a life support console can be heard.
-    You step through the corridors without a sound, thanks to your soft paws. You finally reach the bridge and the captains seat. Time to boot up your spaceship.
+    Before you can start your journey with the **Data Starfleet**, you need to install a few programs on your ships' computer:
 
-    Before you can star your journey with the **Data Starfleet**, you need to install a few programs on your ships' computer:
-
+----
 
 Install Python
 --------------
@@ -42,6 +47,7 @@ Go to [www.anaconda.com/](https://www.anaconda.com/) and download Anaconda for y
 
       pip install --upgrade pandas numpy seaborn matplotlib
 
+----
 
 Start Jupyter
 -------------
@@ -54,12 +60,16 @@ Write an import section
 
 * computer: core Python libraries for data analytics (pandas, numpy, matplotlib, seaborn)
 
-.. code::
+.. code:: python
 
     import pandas as pd
+    import numpy as np
     import seaborn as sns
+    from matplotlib import pyplot as plt
 
 Execute the command with the triangular *"play"* button in the toolbar or press **Shift-Enter**.
+
+----
 
 Apply keyboard shortcuts
 ------------------------
@@ -78,16 +88,7 @@ key              description
 `Shift + Tab     context-sensitive help
 ================ ===============
 
-
-Write a simple new command Insert a new cell.
-Check the options of the `print()` function. Then, run the traditional command to greet your computer:
-
-    print("hello world")
-
-Execute the command with `Shift + Enter`. Your computer should respond with:
-
-    hello world
-
+----
 
 Edit Markdown
 -------------
@@ -96,19 +97,37 @@ Edit and format a Markdown cell in Jupyter
 
 .. code::
 
-    ### Captains log, stardate <TODAY>
+    ### Captains log, stardate <ENTER_TODAYS_DATE>
     
     **Captain <YOUR NAME>** has taken command of the ship *<NAME YOUR SHIP>*.
 
+Change the type of the cell to Markdown using the icons or press `Escape + M`.
 
-Create a DataFrame
-------------------
+Execute the code with the **play** button on top or press `Shift + Enter`.
+You should see the paragraph formatted as HTML.
 
-Enter your data. Type the code:
+----
 
-.. code::
+Execute Python Code
+-------------------
 
-    df = pd.DataFrame([])
-    df
+Write a simple new command Insert a new cell.
+Check the options of the `print()` function. Then, run the traditional command to greet your computer:
 
-Execute the code with the **‘play’** button on top or press **Shift-Enter**.
+    print("hello world")
+
+Execute the code with the **play** button on top or press `Shift + Enter`.
+Your computer should respond with:
+
+    hello world
+
+----
+
+.. figure:: hello_world.jpeg
+
+.. card::
+   :shadow: lg
+
+   It seems your ships computer is online.
+   Time to do some more serious stuff.
+
