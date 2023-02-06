@@ -36,20 +36,14 @@ Contents
    preparations/README.rst
    read_write_data/README.rst
    inspect_data_frames/README.rst
-   create_data_frames/README.rst
    select_rows_and_columns/README.rst
    edit_columns/README.rst
    data_wrangling/README.rst
+   aggregation/README.rst
    plotting_maps/README.rst
-   first_steps/README.rst
+   create_data_frames/README.rst
    links.rst
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
 
 .. figure:: huge.jpeg
 

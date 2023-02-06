@@ -11,7 +11,7 @@ Star Map
 
    The known universe is divided into three sectors, 
    of which the first is inhabited by giant amoeba, the second by penguins, 
-   the third by cute bears called *xiong mao* in their own language, in ours simply *pandas*.
+   the third by cute bears called `xiong mao <https://chinese.yabla.com/chinese-english-pinyin-dictionary.php?define=xiong+mao>`__ in their own language, in ours simply *pandas*.
    All of them differ in their customs, operating systems and favorite programming language.
    But they are generally friendly.
 
@@ -43,6 +43,9 @@ of optional parameters, 3 of which are shown here:
 Read Excel files
 ----------------
 
+Reading Excel spreadsheets works in the same way.
+There is one subtle difference though: if your column labels are numbers, they are converted to integers, while `pd.read_csv()` reads them as strings. 
+
 .. code:: python
 
    df = pd.read_excel('penguin_sector.xlsx', index_col=0)
@@ -53,8 +56,15 @@ Read SQL
 --------
 
 You will need to create a DB connection first. Requires installing the
-SQLAlchemy package and a DB connection package, e.g. \ ``psycopg2`` for
+SQLAlchemy package and a DB connection package, e.g. ``psycopg2`` for
 PostGreSQL
+
+.. code::
+
+   pip install psycopg2-binary
+   pip install sqlalchemy
+
+Once the library is installed, you can send SQL queries to your database and get the results as a DataFrame:
 
 .. code:: python
 
@@ -97,6 +107,8 @@ it is sometimes straightforward to combine them into a single `DataFrame`:
 
    df = pd.concat([df1, df2, df3, ...])
 
+----
+
 Plot the Star Map
 -----------------
 
@@ -136,6 +148,7 @@ The planet names were scraped from `everybodywiki.com <https://en.everybodywiki.
    names = np.array(names)
    np.random.seed(42)  # the answer to everything
    np.random.shuffle(names)
+   n = len(names)
 
    planets = pd.DataFrame({
        'name': names,
