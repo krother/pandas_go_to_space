@@ -26,7 +26,7 @@ Install Python
 
 First, you need to install a Python distribution that allows you to run the **Jupyter Notebook** format. **Anaconda** is a one-stop installation that contains all necessary Python packages and an editing environment.
 
-Go to [www.anaconda.com/](https://www.anaconda.com/) and download Anaconda for your system (the free version) and follow the installation instructions.
+Go to `www.anaconda.com/  <https://www.anaconda.com/>`__ and download Anaconda for your system (the free version) and follow the installation instructions.
 
 .. dropdown:: Can I use Google Colab?
    :animate: fade-in
@@ -114,10 +114,14 @@ Execute Python Code
 Write a simple new command Insert a new cell.
 Check the options of the `print()` function. Then, run the traditional command to greet your computer:
 
+.. code:: python
+
     print("hello world")
 
 Execute the code with the **play** button on top or press `Shift + Enter`.
 Your computer should respond with:
+
+.. code::
 
     hello world
 
