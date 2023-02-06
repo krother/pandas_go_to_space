@@ -24,7 +24,8 @@ Boarding
 Install Python
 --------------
 
-First, you need to install a Python distribution that allows you to run the **Jupyter Notebook** format. **Anaconda** is a one-stop installation that contains all necessary Python packages and an editing environment.
+First, you need to install a Python distribution that allows you to run the **Jupyter Notebook** format. 
+**Anaconda** is a one-stop installation that contains all necessary Python packages and an editing environment.
 
 Go to `www.anaconda.com/  <https://www.anaconda.com/>`__ and download Anaconda for your system (the free version) and follow the installation instructions.
 
@@ -57,8 +58,10 @@ Start Jupyter
 - From the overview page, create a new Python3 notebook with the button **New** (top-right)
 
 Write an import section
+-----------------------
 
-* computer: core Python libraries for data analytics (pandas, numpy, matplotlib, seaborn)
+Check if the core Python libraries for data analytics are installed.
+Write into an empty code cell:
 
 .. code:: python
 
@@ -68,6 +71,8 @@ Write an import section
     from matplotlib import pyplot as plt
 
 Execute the command with the triangular *"play"* button in the toolbar or press **Shift-Enter**.
+You should see an empty output and a new input cell.
+If you don't see an error message, everything has worked.
 
 ----
 
@@ -112,7 +117,8 @@ Execute Python Code
 -------------------
 
 Write a simple new command Insert a new cell.
-Check the options of the `print()` function. Then, run the traditional command to greet your computer:
+Check the options of the `print()` function. 
+Then, run the traditional command to greet your computer:
 
 .. code:: python
 
@@ -132,6 +138,5 @@ Your computer should respond with:
 .. card::
    :shadow: lg
 
-   It seems your ships computer is online.
+   It seems your ships computer is fully online.
    Time to do some more serious stuff.
-
