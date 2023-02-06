@@ -17,18 +17,24 @@ Find your Crew
 
    You will need to check the roster :download:`crew.csv` to identify them.
 
-
 ----
 
 Show column names
 -----------------
 
+You may want to access column names as a Python list.
+This is also useful to check what types the names are.
+
 .. code:: python
 
    df.columns
 
+----
+
 Select a column
 ---------------
+
+A single column is returned as a `pd.Series`:
 
 .. code:: python
 
@@ -61,6 +67,8 @@ The first slice selects all rows, the second selects columns 2-5.
 
 Select rows by position
 -----------------------
+
+You can use the first slice only to access rows:
 
 .. code:: python
 

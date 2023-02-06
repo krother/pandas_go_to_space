@@ -4,7 +4,7 @@ Read and Write Data
 Star Map
 --------
 
-.. figure:: planet_surface.jpeg
+.. figure:: planets.jpeg
 
 .. card::
    :shadow: lg
@@ -16,7 +16,7 @@ Star Map
    But they are generally friendly.
 
    Before your spaceship can travel anywhere, you need to set a course.
-   To find out where you are going, you want to load a **star map** with all three sectors:
+   To find out where you are going, you want to load the **star maps** that contain planets in all three sectors:
 
    :download:`panda_sector.csv`
 
@@ -115,6 +115,18 @@ Plot the Star Map
 .. code:: python
 
    sns.scatterplot(data=df, x='x', y='z', size='size', hue='class')
+
+----
+
+.. figure:: planet_surface.jpeg
+
+Challenge
+---------
+
+.. card::
+   :shadow: lg
+
+   How many planets are there in all three star maps combined?
 
 ----
 
