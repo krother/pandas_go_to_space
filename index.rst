@@ -39,6 +39,7 @@ Contents
    select_rows_and_columns/README.rst
    edit_columns/README.rst
    data_wrangling/README.rst
+   plotting/README.rst
    aggregation/README.rst
    plotting_maps/README.rst
    create_data_frames/README.rst

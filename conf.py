@@ -14,7 +14,11 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx_design', 'sphinx_copybutton']
+extensions = [
+    'sphinx_design',
+    'sphinx_copybutton',
+    'sphinx.ext.todo',
+    ]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -42,3 +46,5 @@ html_theme_options = {
         "color-card-background": "#ffbb88",
     },
 }
+
+todo_include_todos = True

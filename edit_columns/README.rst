@@ -5,10 +5,10 @@ Edit columns
 Planetary Descent
 -----------------
 
+.. figure:: undock.jpeg
+
 .. card::
    :shadow: lg
-
-   .. figure:: undock.jpeg
 
    Todays mission is to examine the vegetation of a newly discovered **class M planet**.
    Because your ship is not equipped with teleportation, your researchers will have to take a shuttle to the surface.
@@ -23,6 +23,7 @@ Planetary Descent
    When should you activate the thrusters and how strong should they be?
    Let's simulate the landing to find out!
 
+----
 
 Create a DataFrame with a single Column
 ---------------------------------------
@@ -46,6 +47,8 @@ The dictionary format in the parentheses allows you to define a DataFrame with m
    Yes. The result does not differ.
    NumPy is faster and more flexible when you want to generate larger amounts of numbers though.
    Also you have access to C++ data types.
+
+----
 
 Add Columns
 -----------
@@ -72,6 +75,8 @@ This works as long as the size of the array matches the shape of the DataFrame:
 
 If you re-assign to an existing column, the old column gets replaced.
 
+----
+
 Modify the contents of a Column
 -------------------------------
 
@@ -86,6 +91,7 @@ The `df.loc` allows you to access a part of a column:
    strength = 50.0        # must be between 10.0-100.0
    df.loc[activation_time:, 'thrust'] = strength
 
+----
 
 Column Arithmetics
 ------------------
@@ -109,6 +115,7 @@ They are applied to every row.
 
    df['altitude [km]'] = 500 - (df['speed'].cumsum() / 1000)
 
+----
 
 Remove a Column
 ---------------
@@ -124,6 +131,7 @@ To remove it, use:
 The argument `axis=1` refers to columns (`axis=0` deletes rows).
 The `inplace=True` modifies the DataFrame.
 
+----
 
 Visualize the Descent
 ---------------------
@@ -152,8 +160,9 @@ We can show both columns in a line plot, but need to switch to a log-scale
 When you see that your altitude goes through the floor of the log plot, it means that the spaceship would crash into the planet.
 
 
-.. figure:: landing.jpeg
+----
 
+.. figure:: landing.jpeg
 
 Challenge
 ---------
