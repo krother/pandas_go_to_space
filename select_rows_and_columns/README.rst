@@ -134,13 +134,40 @@ Challenge
    Fortunately, you have a couple of hints:
    
    * the **Helmspanda** (responsible for steering the ship) has the **id 247**.
-   * the **Data Science Officer** (responsible for DS of course) has **less than 5 white spots**.
-   * the **Paw Plant** (responsible for the reactor and engines) has an **id between 130 and 170**.
-   * the **Bamboo Chef** (responsible for nutrition) has **an ear piercing**.
+   * the **Data Science Officer** (responsible for DS of course) has **more than 18 white spots. They also have their ears dyed in indigo**.
+   * the **Paw Plant** (responsible for the reactor and engines) has an **id between 100 and 199**.
+   * the **Bamboo Chef** (responsible for nutrition) has **their ears dyed in chartreuse. They have fewer white spots than the paw plant**.
    * the **Pandalorian** (responsible for weapons and tactics) has an **unknown ear color**. They might be wearing a helmet.
-   * three of your officers have **exactly 7 black spots**.
+   * all of your officers have **at least 12 white spots**.
+   * three of your officers have **exactly 9 black spots**.
    * none of your officers has their **ears dyed blue**.
-   * all of your officers have **at least 4 white spots**.
    
    **Identify all five of them.**
    
+----
+
+Data Generation
+---------------
+
+Below you find the code to generate the data in :download:`crew.csv`:
+
+.. code:: python
+
+   import pandas as pd
+   import numpy as np
+
+   np.random.seed(42)
+   N = 500
+   EARS = ['black', 'white', 'pink', 'blue', 'green', 'red', 'neon', 'orange', 'chartreuse', 'indigo', 'peachpuff', 'piercing', None]
+   
+   index = pd.Series(np.arange(N), name='id')
+   
+   df = pd.DataFrame(
+       {
+           'white_spots': np.random.randint(1, 20, size=N),
+           'black_spots': np.random.randint(1, 20, size=N),
+           'ears': np.random.choice(EARS, size=N)
+       },
+       index=index
+   )
+   df.to_csv('crew.csv')
