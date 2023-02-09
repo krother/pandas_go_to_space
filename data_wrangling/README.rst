@@ -1,47 +1,30 @@
 Data Wrangling
 ==============
 
-The commands here operate mostly on a per-column-basis.
+Cargo Bay
+---------
+.. figure:: containers.jpeg
 
-.. code:: python
+.. card::
+   :shadow: lg
 
-   import seaborn as sns
-   import pandas as pd
-   import numpy as np
+   One day you decide to inspect the cargo bay of your spaceship.
 
-   df = sns.load_dataset('penguins')
+   What a mess!
 
-Add a Column
-~~~~~~~~~~~~
+   Many of the containers are badly labeled.
+   The radioactive waste is next to the ice cream.
+   Some containers are not labeled at all.
 
-.. code:: python
+   Time for a proper cleanup of the cargo docs in :download:`cargo_labels.csv`. 
 
-   # set entire column to same value
-   df['col1'] = 7
+----
 
-   # use list-like data (pd.Series and np.array work as well)
-   data = list(range(df.shape[0])) # create list of correct length
-   df['col2'] = data
-
-Remove a Column
-~~~~~~~~~~~~~~~
-
-.. code:: python
-
-   del df['col1']
-
-Column Arithmetics
-~~~~~~~~~~~~~~~~~~
-
-.. code:: python
-
-   df['body_mass_kg'] = df['body_mass_g'] / 1000
-
-   # log-transform
-   df['log_body_mass'] = np.log(df['body_mass_g'])
+Sort Rows
+---------
 
 Change Column Data Type
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 .. code:: python
 
@@ -49,7 +32,7 @@ Change Column Data Type
    df['mass'] = df['body_mass_g'].astype(str) + 'g'
 
 Set the Index Column
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 The index is a special column of a DataFrame, because it is treated
 differently by many operations in pandas.
@@ -79,7 +62,7 @@ To move the index to a regular column, use:
    df_reset = df.reset_index()  # inserts a numerical index
 
 Missing Values
-~~~~~~~~~~~~~~
+--------------
 
 Missing values are a common phenomenon. A quick way to diagnose missing
 values is:
@@ -106,21 +89,8 @@ Alternatively, you might want to fill in a best guess value:
 There are many, many strategies to fix missing values (imputation
 methods).
 
-Concatenate multiple DataFrames
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code:: python
-
-   # suppose you have multiple DataFrames with the same columns
-   df1 = df.sample(5)
-   df2 = df.sample(5)
-   df3 = df.sample(5)
-
-   # connect them to one DataFrame vertically
-   df_all = pd.concat([df1, df2, df3])
-
 Swap Rows and Columns
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Some operations (especially plotting) are easier to implement if you
 turn a DataFrame by 90°:
@@ -130,7 +100,7 @@ turn a DataFrame by 90°:
    df.transpose()
 
 Iterate
-~~~~~~~
+-------
 
 Usually, it is possible to write one-liners or concise expressions that
 get the job done. If this is not possible (or you are still learning
@@ -138,3 +108,21 @@ this stuff and can’t figure out a better way yet), you may want to fall
 back to a ``for`` loop over all the rows.
 
 for index, row in df.iterrows(): print(index, row[‘body_mass_g’]
+
+
+.. figure:: boxes.jpeg
+
+Challenge
+---------
+
+.. card::
+   :shadow: lg
+
+   Take care of the following clean-ups in the cargo docs :download:`cargo_labels.csv`:
+
+   - sort the crates by type and by identifier in ascending order
+   - for the radioactive waste, replace the words in the `units` column by numbers
+   - unify
+   - convert the `units` column to the type `int`
+   - fill the missing values in the `units` column
+  
