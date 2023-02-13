@@ -9,12 +9,15 @@
 .. card::
    :shadow: lg
    
-   In the endless voids of space, there is a civilization of pandas.
-   They are peaceful explorers and skilled data scientists.
-   The pandas send out their fleet
+   Long long ago, in a galaxy far far away,
+   there lived pandas who were traveling space.
+   They were peaceful explorers and skilled data scientists.
+   
+   The pandas sent out their spaceships
    to travel the stars,
    to discover new worlds
-   and new tastes of bamboo no creature has tasted before.
+   new tastes of bamboo no creature has tasted before
+   and to plot all data they found on their way.
 
 .. figure:: planet.png
 

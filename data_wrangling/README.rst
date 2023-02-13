@@ -107,10 +107,11 @@ get the job done. If this is not possible (or you are still learning
 this stuff and can’t figure out a better way yet), you may want to fall
 back to a ``for`` loop over all the rows.
 
-for index, row in df.iterrows(): print(index, row[‘body_mass_g’]
+for index, row in df.iterrows(): 
+    print(index, row[‘body_mass_g’])
 
 
-.. figure:: boxes.jpeg
+.. figure:: bamboo.jpg
 
 Challenge
 ---------
@@ -120,9 +121,9 @@ Challenge
 
    Take care of the following clean-ups in the cargo docs :download:`cargo_labels.csv`:
 
-   - sort the crates by type and by identifier in ascending order
    - for the radioactive waste, replace the words in the `units` column by numbers
-   - unify
    - convert the `units` column to the type `int`
+   - fill the missing values in the `category` column for the bamboo ice cream
    - fill the missing values in the `units` column
+   - sort the crates by type and by identifier in ascending order
   
