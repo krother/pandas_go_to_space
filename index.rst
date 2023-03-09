@@ -45,6 +45,7 @@ Contents
    plotting/README.rst
    aggregation/README.rst
    descriptive_statistics/README.rst
+   time_series/README.rst
    plotting_maps/README.rst
    create_data_frames/README.rst
    links.rst
