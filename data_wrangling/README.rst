@@ -16,7 +16,7 @@ Cargo Bay
    The radioactive waste is next to the ice cream.
    Some containers are not labeled at all.
 
-   Time for a proper cleanup of the cargo docs in :download:`cargo_labels.csv`. 
+   Time for a proper cleanup of the cargo docs in :download:`cargo.csv`. 
 
 ----
 
@@ -119,7 +119,7 @@ Challenge
 .. card::
    :shadow: lg
 
-   Take care of the following clean-ups in the cargo docs :download:`cargo_labels.csv`:
+   Take care of the following clean-ups in the cargo docs :download:`cargo.csv`:
 
    - for the radioactive waste, replace the words in the `units` column by numbers
    - convert the `units` column to the type `int`
