@@ -63,6 +63,35 @@ and `deepai.org <https://deepai.org/>`__ .
 
 The spaceship logo was purchased from `thenounproject.com <https://thenounproject.com/>`__
 
+There are other resources that I found useful for learning data science: 
+
+Books: 
+
+1. Maths: 
+Essential math for Data Science, Hadrien Jean 
+Essential math for AI, Hala Nelson
+
+2. Data Analysis: 
+Python for Data Analysis, Wes McKinney 
+Python for Finance, Yves Hilpisch
+SQL for Data Analysis, Cathay Tanimura
+
+3. Statistics: 
+Practical Statistics for Data Scientists, Peter Bruce, Andrew Bruce, Peter Gedeck
+
+4. Data Visualisation: 
+Fundamentals of Data Visualisation, Claus O.Wilke 
+
+5. Data Science: 
+Python Data Science Handbook, Jake Vanderplas 
+Hands-on ML with scikit learn, Keras, Tensor Flow, Aurelien Geron 
+
+Websites: 
+
+https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization
+https://datavizcatalogue.com/
+
+
 License
 -------
 
