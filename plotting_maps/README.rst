@@ -2,13 +2,15 @@
 Plotting Maps
 =============
 
+.. figure:: earth.jpeg
+
+`By NASA - Public Domain via Wikimedia <https://commons.wikimedia.org/w/index.php?curid=512571>`__,  also see `original source <http://visibleearth.nasa.gov/view_detail.php?id=2429http://veimages.gsfc.nasa.gov//2429/globe_east_540.jpg>`__
+
 To Earth
 --------
 
 .. card::
    :shadow: lg
-
-   .. figure:: earth.png
 
    Your sensors have picked up `a colony of pandas <http://www.panda.org.cn/>`__ on a remote class M planet.
    You suspect they are being held captive by a primitive species of two-legged aliens.
@@ -27,8 +29,8 @@ To Earth
 The folium Library
 ------------------
 
-`folium` is a Python map plotting library built on top of the JavaScript library **leaflet** (hence the nam
-e). `folium` uses map tiles from `OpenStretMap <https://www.openstreetmap.org>`__
+`folium` is a Python map plotting library built on top of the JavaScript library **leaflet** (hence the name).
+`folium` uses map tiles from `OpenStretMap <https://www.openstreetmap.org>`__
 It produces HTML documents:
 
 Use `pip` to install the `folium` package:
