@@ -47,6 +47,7 @@ Contents
    descriptive_statistics/README.rst
    time_series/README.rst
    long_vs_wide/README.rst
+   string_handling/README.rst
    plotting_maps/README.rst
    create_data_frames/README.rst
    links.rst
