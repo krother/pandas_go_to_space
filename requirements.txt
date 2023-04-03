@@ -3,3 +3,7 @@ sphinx-design
 sphinx-copybutton
 myst-parser
 furo
+
+seaborn
+matplotlib
+pandas
