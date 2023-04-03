@@ -14,9 +14,11 @@ st.write("""
 """)
 
 df = sns.load_dataset('penguins')
-#st.write(df)
+
+st.write("## Penguins with flippers a maximum length")
 
 number = st.slider("pick a number", 0, 1000)
+st.write(df.shape)
 
 df = df[df["flipper_length_mm"] < number]
 st.write(df)
@@ -27,3 +29,4 @@ st.bar_chart(df["species"].value_counts())
 fig = plt.figure()
 sns.histplot(df["flipper_length_mm"], kde=True)
 st.pyplot(fig)
+
