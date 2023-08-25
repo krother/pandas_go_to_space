@@ -137,6 +137,11 @@ Challenge
 
 ----
 
+
+.. include:: seven_lines_roundtrip.rst
+
+----
+
 Sources
 -------
 

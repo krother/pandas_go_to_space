@@ -191,4 +191,6 @@ Try different window sizes and see how the curve becomes smoother and smoother.
 
    You can find more examples in the `pandas documentation <https://pandas.pydata.org/pandas-docs/stable/timeseries.html>`__
 
+----
 
+.. include:: seven_lines_datetime.rst

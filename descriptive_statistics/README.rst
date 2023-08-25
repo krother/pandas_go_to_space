@@ -259,4 +259,6 @@ This is why **domain expertise** is indispensible!
 
     `Simpsons Paradox on Wikipedia <https://en.wikipedia.org/wiki/Simpson%27s_paradox>`__
 
+----
 
+.. include:: seven_lines_descriptive.rst

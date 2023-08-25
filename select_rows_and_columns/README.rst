@@ -171,3 +171,7 @@ Below you find the code to generate the data in :download:`crew.csv`:
        index=index
    )
    df.to_csv('crew.csv')
+
+----
+
+.. include:: seven_lines_filter.rst

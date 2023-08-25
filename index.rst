@@ -56,6 +56,7 @@ Challenges
    challenges/babynames/timeline.rst
    challenges/babynames/last_letters.rst
    challenges/climate_stripes/README.rst
+   challenges/titanic.rst
    challenges/gapminder/README.rst
    challenges/beakonomics.rst
    challenges/pingubase/README.rst

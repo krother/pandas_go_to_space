@@ -105,13 +105,6 @@ Recap
 
    -  `Dunder Data Challenges <https://mybinder.org/v2/gh/DunderData/Dunder-Data-Challenges/master>`__
 
+----
 
-Challenge
----------
-
-   1. Who is the 7th penguin?
-   2. How many Gentoos are in the dataset?
-   3. Who is the heaviest penguin
-   4. What is the mean size of female penguins?
-   5. How many penguins are heavier than 3kg?
-   6. Select 3 random penguins.
+.. include:: seven_lines_aggregation.rst

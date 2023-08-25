@@ -122,9 +122,12 @@ Challenge
 .. card::
    :shadow: lg
 
-   Inspect the report :download:`ship_inspection.csv` to find out:
+   Inspect the report :download:`ship_inspection.csv`. Solve the following tasks
 
-   - How many life forms are there on the bridge?
-   - How many stations does the ship have?
-   - How many different security levels are there?
-   - There is one life support value that is neither 0 or 100%. How much is it? 
+   - display the number of rows and columns
+   - display the last 5 rows
+   - list the column names
+   - how many life forms are there on the bridge?
+   - how many stations does the ship have?
+   - how many different security levels are there?
+   - there is one life support value that is neither 0 or 100%. How much is it? 

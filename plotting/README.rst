@@ -2,7 +2,6 @@
 High-Quality Plots
 ==================
 
-
 Navigation
 ----------
 
