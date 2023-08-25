@@ -5,7 +5,7 @@ Preparations
 Boarding
 --------
 
-.. figure:: panda_airlock.png
+.. figure:: panda_cockpit.jpeg
 
 
 .. card::
@@ -18,7 +18,7 @@ Boarding
     You step through the corridors without a sound, thanks to your soft paws.
     You finally reach the bridge and the captains seat. Time to boot your spaceships computer.
 
-    Before you can start your journey with the **Data Starfleet**, you need to install a few programs on your ships' computer:
+    Before you can start your journey, you need to install a few programs on your ships' computer:
 
 ----
 
@@ -64,7 +64,7 @@ Write an import section
 Check if the core Python libraries for data analytics are installed.
 Write into an empty code cell:
 
-.. code:: python
+.. code:: python3
 
     import pandas as pd
     import numpy as np
@@ -83,16 +83,16 @@ Apply keyboard shortcuts
 Hitting those small keys with your big paws is not easy.
 It takes years of practice. To make your life easier, there are a couple of useful shortcuts: 
 
-================ ===============
+================ ==========================
 key              description  
-================ ===============
+================ ==========================
 `Shift + Enter`  execute a cell
 `Escape + A`     insert a cell above
 `Escape + B`     insert a cell below
 `Escape + X`     delete the current cell
 `Tab`            autocomplete names
-`Shift + Tab     context-sensitive help
-================ ===============
+`Shift + Tab`    context-sensitive help
+================ ==========================
 
 ----
 

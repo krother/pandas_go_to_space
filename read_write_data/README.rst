@@ -112,9 +112,16 @@ it is sometimes straightforward to combine them into a single `DataFrame`:
 Plot the Star Map
 -----------------
 
+With the **seaborn** library, you can visualize data from DataFrames with one-liners:
+
 .. code:: python
 
    sns.scatterplot(data=df, x='x', y='z', size='size', hue='class')
+
+Here is how your home sector should look like:
+
+.. figure:: panda_sector.png
+
 
 ----
 

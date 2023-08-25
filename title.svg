@@ -42,8 +42,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="25.581719"
-     inkscape:cy="203.76403"
+     inkscape:cx="496.5341"
+     inkscape:cy="438.99161"
      inkscape:document-units="mm"
      inkscape:current-layer="g4768"
      showgrid="false"
@@ -115,33 +115,44 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="40.208584"
+         x="41.801945"
          y="269.03912"
          id="text838"><tspan
            sodipodi:role="line"
-           x="40.208584"
+           x="41.801945"
            y="269.03912"
            id="tspan836"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"><tspan
-             x="40.208584"
-             y="269.03912"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.11111164px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-             id="tspan834">DATA STARFLEET</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">PANDAS GO TO SPACE <tspan
+   x="41.801945"
+   y="269.03912"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.11111164px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
+   id="tspan834" /></tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="50.93454"
+         x="31.219633"
          y="286.1803"
          id="text844"><tspan
            sodipodi:role="line"
-           x="50.93454"
+           x="31.219633"
            y="286.1803"
            id="tspan842"
            style="font-size:9.17222309px;stroke-width:0.26458332"><tspan
-             x="50.93454"
+             x="31.219633"
              y="286.1803"
              style="font-weight:bold;font-size:9.17222309px;fill:#3964c6;fill-opacity:1;stroke-width:0.26458332"
-             id="tspan840">PANDAS GO TO SPACE</tspan></tspan></text>
+             id="tspan840">Python Data Analysis Tutorial</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="120.25047"
+         y="264.87201"
+         id="text26"><tspan
+           sodipodi:role="line"
+           id="tspan24"
+           x="120.25047"
+           y="264.87201"
+           style="stroke-width:0.26458332"> </tspan></text>
     </g>
   </g>
 </svg>
