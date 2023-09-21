@@ -10,12 +10,12 @@ Find your Crew
    :shadow: lg
 
    As a spaceship captain, you are nothing without your crew.
-   There is a tradition in the Data Starfleet:
-   Your five senior officers are hiding among the regular crew members, until their captain finds them.
-   You assemble the entire crew on the flight dack.
-   Unfortunately, it is quite hard to find someone in a crowd of 500 pandas.
-
-   You will need to check the roster :download:`crew.csv` to identify them.
+   You have five capable officers that help you run things.
+   Unfortunately, you have no idea where they are.
+   You assemble the entire crew on the flight deck.
+   How did your officers look like again?
+   
+   You will need to load the crew roster :download:`crew.csv` to identify them.
 
 ----
 
@@ -45,7 +45,8 @@ A single column is returned as a `pd.Series`:
 Select multiple columns
 -----------------------
 
-Takes a list of column names
+Multiple columns require double square brackets.
+The inner one is a list of column names:
 
 .. code:: python
 
@@ -130,14 +131,13 @@ Challenge
    :shadow: lg
 
    Select rows from the crew roster :download:`crew.csv` to find your five officers.
-
-   Fortunately, you have a couple of hints:
+   You have a couple of hints:
    
    * the **Helmspanda** (responsible for steering the ship) has the **id 247**.
    * the **Data Science Officer** (responsible for DS of course) has **more than 18 white spots. They also have their ears dyed in indigo**.
    * the **Paw Plant** (responsible for the reactor and engines) has an **id between 100 and 199**.
    * the **Bamboo Chef** (responsible for nutrition) has **their ears dyed in chartreuse. They have fewer white spots than the paw plant**.
-   * the **Pandalorian** (responsible for weapons and tactics) has an **unknown ear color**. They might be wearing a helmet.
+   * the **Pandalorian** (responsible for weapons and tactics) has an **unknown ear color**. They wear a helmet all the time.
    * all of your officers have **at least 12 white spots**.
    * three of your officers have **exactly 9 black spots**.
    * none of your officers has their **ears dyed blue**.

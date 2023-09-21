@@ -12,11 +12,12 @@ Boarding
     :shadow: lg
 
     You enter your spaceship through the airlock and take off your helmet.
-    As the captain, it is your duty and privilege to be the first panda on board.
+    As the captain, it is your duty to be the first panda on board.
     There is an eerie silence. The ship is sleeping.
-    Only an occasional hum from a life support console can be heard.
-    You step through the corridors without a sound, thanks to your soft paws.
-    You finally reach the bridge and the captains seat. Time to boot your spaceships computer.
+    An occasional hum from a life support console is all you can hear.
+    You step through the corridors and finally reach the bridge.
+    The captains seat feels comfortable, once again.
+    Time to boot your spaceships computer.
 
     Before you can start your journey, you need to install a few programs on your ships' computer:
 
@@ -25,10 +26,10 @@ Boarding
 Install Python
 --------------
 
-First, you need to install a Python distribution that allows you to run the **Jupyter Notebook** format. 
+First, you need to install a Python distribution that allows you to run the **Jupyter Notebook** format.
 **Anaconda** is a one-stop installation that contains all necessary Python packages and an editing environment.
 
-Go to `www.anaconda.com/  <https://www.anaconda.com/>`__ and download Anaconda for your system (the free version) and follow the installation instructions.
+Go to `www.anaconda.com  <https://www.anaconda.com/>`__ and download Anaconda for your system (the free version) and follow the installation instructions.
 
 .. dropdown:: Can I use Google Colab?
    :animate: fade-in
@@ -77,8 +78,8 @@ If you don't see an error message, everything has worked.
 
 ----
 
-Apply keyboard shortcuts
-------------------------
+Keyboard shortcuts
+------------------
 
 Hitting those small keys with your big paws is not easy.
 It takes years of practice. To make your life easier, there are a couple of useful shortcuts: 
