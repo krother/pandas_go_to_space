@@ -5,7 +5,7 @@ String Handling
 .. figure:: delegate.jpeg
 
 Diplomacy
---------
+---------
 
 .. card::
    :shadow: lg

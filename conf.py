@@ -18,12 +18,26 @@ extensions = [
     'sphinx_design',
     'sphinx_copybutton',
     'sphinx.ext.todo',
+    "sphinx.ext.intersphinx",
     ]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 language = 'ls'
+
+# -- intersphinx configuration -----------------------------------------------
+
+intersphinx_mapping = {
+    "jupyter-tutorial": ("https://jupyter-tutorial.readthedocs.io/de/latest/", None),
+    "python": ("https://docs.python.org/3", None),
+    "ipython": ("https://ipython.readthedocs.io/en/latest/", None),
+    "jupyter-notebook": ("https://jupyter-notebook.readthedocs.io/en/stable/", None),
+    "pandas": ("https://pandas.pydata.org/pandas-docs/stable/", None),
+    "pyviz": ("https://pyviz-tutorial.readthedocs.io/de/latest/", None),
+    "python-basics": ("https://python-basics-tutorial.readthedocs.io/de/latest/", None),
+}
+
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
