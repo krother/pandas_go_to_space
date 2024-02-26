@@ -7,7 +7,7 @@ Read the file :download:`penguin_sector.csv` into Python:
 
    import pandas as pd
 
-   df = pd.read_csv('penguin_sector.csv', index_col=0, sep=',', header=True)
+   df = pd.read_csv('penguin_sector.csv', index_col=0, sep=',', header=0)
 
 
 Solve the following tasks:

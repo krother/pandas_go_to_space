@@ -30,13 +30,42 @@ Read CSV files
 --------------
 
 The ``read_csv`` function is often the first command used. It has a lot
-of optional parameters, 3 of which are shown here:
+of optional parameters, three of which are shown here:
 
 .. code:: python
 
    import pandas as pd
 
    df = pd.read_csv('penguin_sector.csv', index_col=0, sep=',', header=0)
+
+``df`` is a **DataFrame**, a fundamental data structure in pandas.
+For most practical matters, it works like a table.
+
+Inspect the data
+----------------
+
+After reading data into a DataFrame, you might want to see what is inside.
+It is a good idea to do that right away.
+In Jupyter, you would type into a cell:
+
+.. code:: python
+
+   df
+
+and in a regular Python script you need an extra ``print`` statement:
+
+.. code:: python
+
+   print(df)
+
+To see the number or rows and columns, use:
+
+.. code:: python
+
+   df.shape
+
+Use ``print()`` in the same way outside Jupyter.
+This won't be mentioned every time.
 
 ----
 
@@ -109,22 +138,6 @@ it is sometimes straightforward to combine them into a single `DataFrame`:
 
 ----
 
-Plot the Star Map
------------------
-
-With the **seaborn** library, you can visualize data from DataFrames with one-liners:
-
-.. code:: python
-
-   sns.scatterplot(data=df, x='x', y='z', size='size', hue='class')
-
-Here is how your home sector should look like:
-
-.. figure:: panda_sector.png
-
-
-----
-
 .. figure:: planet_surface.jpeg
 
 Challenge
@@ -142,48 +155,9 @@ Challenge
 
 ----
 
-Sources
--------
+.. dropdown:: Where do the planet names come from?
+   :animate: fade-in
 
-The planet names were scraped from `everybodywiki.com <https://en.everybodywiki.com/List_of_Star_Trek_planets_(A%E2%80%93B)>`__ with the following script:
+   The planet names were scraped from `everybodywiki.com <https://en.everybodywiki.com/List_of_Star_Trek_planets_(A%E2%80%93B)>`__ with the following script:
 
-.. code:: python
-
-   import requests
-   import re
-   import pandas as pd
-   import numpy as np
-
-   base_url = "https://en.everybodywiki.com/List_of_Star_Trek_planets"
-   char_ranges = ("AB", "CF", "GL", "MQ", "RS", "TZ")
-   pattern = r'<span id="[^"]+">([^>]+)</span>|<li><b>([^>]+)</b>|<p><b>([^<]+)</b>'
-
-   # scrape planet names
-   names = []
-   for char_from, char_to in char_ranges:
-       url = f"{base_url}_({char_from}%E2%80%93{char_to})"
-       page = requests.get(url)
-       found_names = re.findall(pattern, page.text)
-       print(char_from, char_to, len(found_names))
-       names += [''.join(n) for n in found_names]
-
-
-   # create a table with planets
-   names = np.array(names)
-   np.random.seed(42)  # the answer to everything
-   np.random.shuffle(names)
-   n = len(names)
-
-   planets = pd.DataFrame({
-       'name': names,
-       'x': np.random.random(size=(n,)) * 100,
-       'y': np.random.random(size=(n,)) * 100,
-       'z': np.random.random(size=(n,)) * 100,
-       'class': np.random.choice(np.array(list('MABC')), size=(n,)),
-       'size': np.random.randint(1, 20, size=(n,)),
-   })
-
-   # write planets to files
-   planets.iloc[:300].to_csv('panda_sector.csv')
-   planets.iloc[300:600].to_csv('penguin_sector.csv')
-   planets.iloc[600:].to_csv('amoeba_sector.csv')
+   .. literalinclude:: planet_scraper.py
