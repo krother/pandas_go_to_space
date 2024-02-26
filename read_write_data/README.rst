@@ -36,7 +36,7 @@ of optional parameters, 3 of which are shown here:
 
    import pandas as pd
 
-   df = pd.read_csv('penguin_sector.csv', index_col=0, sep=',', header=True)
+   df = pd.read_csv('penguin_sector.csv', index_col=0, sep=',', header=0)
 
 ----
 
