@@ -3,6 +3,7 @@ Data Wrangling
 
 Cargo Bay
 ---------
+
 .. figure:: containers.jpeg
 
 .. card::
@@ -20,18 +21,32 @@ Cargo Bay
 
 ----
 
-Sort Rows
+Sort rows
 ---------
 
-Change Column Data Type
------------------------
+Sort a DataFrame by:
 
 .. code:: python
 
-   # convert to string
+   df.sort_values(by="category", inplace=True)
+
+to sort by more than one column, try:
+
+.. code:: python
+
+   df.sort_values(by=["category", "units"], ascending=[True, False], inplace=True)
+
+
+Change the data type
+--------------------
+
+Convert values to a string:
+
+.. code:: python
+
    df['mass'] = df['body_mass_g'].astype(str) + 'g'
 
-Set the Index Column
+Set the index column
 --------------------
 
 The index is a special column of a DataFrame, because it is treated
@@ -61,7 +76,7 @@ To move the index to a regular column, use:
 
    df_reset = df.reset_index()  # inserts a numerical index
 
-Missing Values
+Missing values
 --------------
 
 Missing values are a common phenomenon. A quick way to diagnose missing
@@ -89,7 +104,7 @@ Alternatively, you might want to fill in a best guess value:
 There are many, many strategies to fix missing values (imputation
 methods).
 
-Swap Rows and Columns
+Swap rows and columns
 ---------------------
 
 Some operations (especially plotting) are easier to implement if you
@@ -107,8 +122,10 @@ get the job done. If this is not possible (or you are still learning
 this stuff and can’t figure out a better way yet), you may want to fall
 back to a ``for`` loop over all the rows.
 
-for index, row in df.iterrows(): 
-    print(index, row[‘body_mass_g’])
+.. code:: python
+
+   for index, row in df.iterrows(): 
+       print(index, row['body_mass_g'])
 
 
 .. figure:: bamboo.jpg

@@ -15,8 +15,8 @@ Planetary Descent
    Your job is to bring them down safely.
 
    * Currently, your ship (and the shuttle) is orbiting in an altitude of **500km**.
-   * Once the shuttle leaves orbit, the planets gravity accelerates the shuttle constantly by **$9.81 \frac{m}{s^2}$**.
-   * At an arbitrary moment, the shuttle can **activate its thrusters**. The thrusters thrust with an acceleration of **$10.0-100.0\frac{m}{s^2}$**.
+   * Once the shuttle leaves orbit, the planets gravity accelerates the shuttle constantly by :math:`9.81 \frac{m}{s^2}`.
+   * At an arbitrary moment, the shuttle can **activate its thrusters**. The thrusters thrust with an acceleration of :math:`10.0-100.0\frac{m}{s^2}`.
    * You cannot deactivate the thrusters or change their strength (this produces a lot of cleanup work and is reserved for emergencies).
    * To reach your destination on the surface, you want to reach the surface within **1500 seconds**.
   
@@ -25,7 +25,7 @@ Planetary Descent
 
 ----
 
-Create a DataFrame with a single Column
+Create a DataFrame with a single column
 ---------------------------------------
 
 Simulate the ships' altitude over time with a resolution of one second.
@@ -44,13 +44,13 @@ The dictionary format in the parentheses allows you to define a DataFrame with m
 .. dropdown:: Could I use `range()` instead of `np.arange`?
    :animate: fade-in
 
-   Yes. The result does not differ.
+   Yes. You would need to convert the output to a list with ``list(range(...))``.
    NumPy is faster and more flexible when you want to generate larger amounts of numbers though.
    Also you have access to C++ data types.
 
 ----
 
-Add Columns
+Add columns
 -----------
 
 Because the gravity does not change, we create a new column and fill it up with one value:
@@ -77,7 +77,7 @@ If you re-assign to an existing column, the old column gets replaced.
 
 ----
 
-Modify the contents of a Column
+Modify the contents of a column
 -------------------------------
 
 Now we need to switch on the thrusters.
@@ -93,7 +93,7 @@ The `df.loc` allows you to access a part of a column:
 
 ----
 
-Column Arithmetics
+Column arithmetics
 ------------------
 
 We can create new columns using math equations:
@@ -117,7 +117,7 @@ They are applied to every row.
 
 ----
 
-Remove a Column
+Remove a column
 ---------------
 
 The `seconds` column was useful in the beginning, so that the DataFrame was not empty.
@@ -133,7 +133,7 @@ The `inplace=True` modifies the DataFrame.
 
 ----
 
-Visualize the Descent
+Visualize the descent
 ---------------------
 
 Let's plot the outcome of the simulation.
@@ -167,6 +167,10 @@ When you see that your altitude goes through the floor of the log plot, it means
 Challenge
 ---------
 
-Once you reach an altitude of **less than 100 m** and a speed of **less than 100 m/s**, you can activate the **anti-gravitational landing gear** that will finish the landing automatically.
+.. card::
+   :shadow: lg
 
-Find out values for **activation_time** and **strength**.
+   Once you reach an altitude of **less than 100 m** and a speed of **less than 100 m/s**,
+   you can activate the **anti-gravitational landing gear** that will finish the landing automatically.
+
+   Find out values for **activation_time** and **strength**.
