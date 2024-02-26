@@ -41,31 +41,31 @@ of optional parameters, three of which are shown here:
 ``df`` is a **DataFrame**, a fundamental data structure in pandas.
 For most practical matters, it works like a table.
 
-Inspect the data
-----------------
+.. dropdown:: How can I check what is in a DataFrame?
+   :animate: fade-in
 
-After reading data into a DataFrame, you might want to see what is inside.
-It is a good idea to do that right away.
-In Jupyter, you would type into a cell:
+   After reading data into a DataFrame, you might want to see what is inside.
+   It is a good idea to do that right away.
+   In Jupyter, you would type into a cell:
 
-.. code:: python
+   .. code:: python
 
-   df
+      df
 
-and in a regular Python script you need an extra ``print`` statement:
+   and in a regular Python script you need an extra ``print`` statement:
 
-.. code:: python
+   .. code:: python
 
-   print(df)
+      print(df)
 
-To see the number or rows and columns, use:
+   To see the number or rows and columns, use:
 
-.. code:: python
+   .. code:: python
 
-   df.shape
+      df.shape
 
-Use ``print()`` in the same way outside Jupyter.
-This won't be mentioned every time.
+   Use ``print()`` in the same way outside Jupyter.
+   This won't be mentioned from now on.
 
 ----
 
