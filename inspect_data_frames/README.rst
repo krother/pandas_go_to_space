@@ -1,7 +1,7 @@
 Inspect DataFrames
 ==================
 
-Check all Stations
+Check all stations
 ------------------
 
 .. figure:: corridor.jpeg
@@ -67,7 +67,7 @@ The shape of a `DataFrame` is alway a tuple of two integers `(rows, columns)`.
 
 ----
 
-Data Types
+Data types
 ----------
 
 When you load data from a CSV file, `pandas` automatically infers data types.
@@ -84,7 +84,7 @@ Sometimes a single wrong value converts a numerical column to strings.
 
 ----
 
-Generic Overview
+Generic overview
 ----------------
 
 You can check data types, the number of entries for each column and memory size with a single command:
@@ -96,7 +96,7 @@ You can check data types, the number of entries for each column and memory size 
 
 ----
 
-Unique Values
+Unique values
 -------------
 
 With categorical columns, you might want to know, what are the most frequent values or what different values occur.
