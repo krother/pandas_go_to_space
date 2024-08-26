@@ -1,13 +1,12 @@
 Inspect DataFrames
 ==================
 
-Check all stations
-------------------
-
 .. figure:: corridor.jpeg
 
 .. card::
    :shadow: lg
+
+   **Check all Stations**
 
    Before you can take off, you need to check whether your ship is in a good shape.
    The **Data Starfleet inspection procedure** is to check all stations of the ship,

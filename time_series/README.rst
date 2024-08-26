@@ -19,7 +19,7 @@ Reactor Trouble
 
    Here is the data:
    
-   .. code:: ipython3
+   .. code:: python3
 
       import numpy as np
 
@@ -34,7 +34,7 @@ Handling timestamps is one of the strongest features in ``pandas``.
 Most of the time, you will want the timestamps to be in the **row index**.
 With :py:func:`pandas.date_range` you can create series of timestamps from scratch:
 
-.. code:: ipython3
+.. code:: python3
 
     import pandas as pd
 
@@ -51,7 +51,7 @@ In both cases, a ``pandas.DateTimeIndex`` is used to track data over time.
 
 You could also create timestamps specifying both boundaries and a number of periods:
 
-.. code:: ipython3
+.. code:: python3
 
     pd.date_range("2023-03-09 08:22:00", "2023-03-09 16:00:00", periods=200),
 
@@ -64,7 +64,7 @@ Parsing strings to timestamps is very convenient.
 ``pandas`` understands plenty of different formats.
 This makes your life much easier, e.g. when parsing the log files of an anti-matter reactor.
 
-.. code:: ipython3
+.. code:: python3
 
     pd.to_datetime(
         ["2020", "September 16th, 2020", "2020 Sep 16 11:11", "2020/09/16", "09/16/2020"],
@@ -84,7 +84,7 @@ Plotting Time Series
 
 When plotting a time series, ``pandas`` automatically uses the time index for the x-axis:
 
-.. code:: ipython3
+.. code:: python3
 
     s.plot()
 
@@ -95,7 +95,7 @@ The **random data** becomes a **random walk**.
 You see that the small changes add up over time and the data is drifting.
 Note that the resulting data still has a similar timestamp index:
 
-.. code:: ipython3
+.. code:: python3
 
     ts = s.cumsum()
     ts.plot()
@@ -130,7 +130,7 @@ Indexing and Slicing
 
 Timestamp indexes can be indexed and sliced comfortably using string intervals:
 
-.. code:: ipython3
+.. code:: python3
 
     ts['1/10/2011']
     ts["2023-03-20":"2023-04-17"]
@@ -157,7 +157,7 @@ Like with ``df.groupby()``, you need to specify, how the rows should be aggregat
 **Upsampling** changes the index to a wider timescale (more rows).
 The resulting gaps need to be filled or interpolated, otherwise they stay empty:
 
-.. code:: ipython3
+.. code:: python3
 
     ts.resample("6h10min").first()
     ts.resample("6h10min3s").ffill()

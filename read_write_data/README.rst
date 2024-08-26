@@ -1,13 +1,12 @@
 Read and Write Data
 ===================
 
-Star Map
---------
-
 .. figure:: planets.jpeg
 
 .. card::
    :shadow: lg
+
+   **Planet Data**
 
    The known universe is divided into three sectors, 
    of which the first is inhabited by giant amoeba, the second by penguins, 
@@ -16,7 +15,7 @@ Star Map
    But they are generally friendly.
 
    Before your spaceship can travel anywhere, you need to set a course.
-   To find out where you are going, you want to load the **star maps** that contain planets in all three sectors:
+   To find out where you are going, you want to load the lists of planets in all three sectors:
 
    :download:`panda_sector.csv`
 

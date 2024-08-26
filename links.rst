@@ -9,7 +9,7 @@ pandas
 - `Pandas Exercises <https://github.com/guipsamora/pandas_exercises>`__ – by @guipsamora
 
 Visualization
---------
+-------------
 
 - `Python Graph Gallery <https://python-graph-gallery.com/>`__ – example plots with code
 - `Matplotlib Intro on scipy-lectures.org <https://scipy-lectures.org/intro/matplotlib/index.html>`__

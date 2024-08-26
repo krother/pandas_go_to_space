@@ -2,13 +2,12 @@
 Edit columns
 ============
 
-Planetary Descent
------------------
-
 .. figure:: undock.jpeg
 
 .. card::
    :shadow: lg
+
+   **Planetary Descent**
 
    Todays mission is to examine the vegetation of a newly discovered **class M planet**.
    Because your ship is not equipped with teleportation, your researchers will have to take a shuttle to the surface.

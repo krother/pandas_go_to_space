@@ -1,13 +1,12 @@
 Select Rows and Columns
 =======================
 
-Find your Crew
---------------
-
 .. figure:: crew.png
 
 .. card::
    :shadow: lg
+
+   **Find your Crew**
 
    As a spaceship captain, you are nothing without your crew.
    You have five capable officers that help you run things.

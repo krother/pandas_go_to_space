@@ -2,14 +2,13 @@
 Preparations
 ============
 
-Boarding
---------
-
 .. figure:: panda_cockpit.jpeg
 
 
 .. card::
     :shadow: lg
+
+    **Boarding**
 
     You enter your spaceship through the airlock and take off your helmet.
     As the captain, it is your duty to be the first panda on board.
@@ -30,6 +29,14 @@ First, you need to install a Python distribution that allows you to run the **Ju
 **Anaconda** is a one-stop installation that contains all necessary Python packages and an editing environment.
 
 Go to `www.anaconda.com  <https://www.anaconda.com/>`__ and download Anaconda for your system (the free version) and follow the installation instructions.
+
+.. dropdown:: Can I use VSCode instead?
+   :animate: fade-in
+
+   Yes. VSCode has a great plugin that handles the interactive Python environment.
+   It is very similar to Jupyter. 
+   However, I am not using it so please don't ask me for configuration details.
+
 
 .. dropdown:: Can I use Google Colab?
    :animate: fade-in
