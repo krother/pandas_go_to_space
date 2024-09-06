@@ -52,6 +52,7 @@ Challenges
 .. toctree::
    :maxdepth: 1
 
+   challenges/powerful_pivots.rst
    challenges/babynames/read_data.rst
    challenges/babynames/timeline.rst
    challenges/babynames/last_letters.rst
