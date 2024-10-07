@@ -141,7 +141,7 @@ However, with a timestamp index it is better to use ``df.resample()``:
 
 .. code:: python3
    
-   yearly = df.resample(freq='Y').median()
+   yearly = df.resample('YE').median()
 
 The resampling has the advantage that you still have a timestamp index
 after the operation.
@@ -161,12 +161,12 @@ Plot the aggregate as a line plot again.
    You may want to try out resampling different frequencies.
    ``pandas`` understands frequency values like ``'3M2d5h10sec'``
 
-   See `Offset Aliases <https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases>`__
+   See `Offset Aliases <https://pandas.pydata.org/pandas-docs/user_guide/timeseries.html#offset-aliases>`__
    for a list of all options.
 
 --------------
 
-Step 7: Heatmap
+Step 8: Heatmap
 ~~~~~~~~~~~~~~~
 
 The ``seaborn`` library has a heatmap function that you can use to plot
