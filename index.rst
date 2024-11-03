@@ -44,6 +44,7 @@ Contents
    string_handling/README.rst
    plotting_maps/README.rst
    create_data_frames/README.rst
+   dashboard/README.rst
    links.rst
 
 Challenges
