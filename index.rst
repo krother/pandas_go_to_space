@@ -60,7 +60,6 @@ Challenges
    challenges/climate_stripes/README.rst
    challenges/titanic.rst
    challenges/gapminder/README.rst
-   challenges/beakonomics.rst
    challenges/pingubase/README.rst
    challenges/pagerank/README.rst
 
