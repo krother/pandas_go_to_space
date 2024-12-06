@@ -45,6 +45,7 @@ Contents
    plotting_maps/README.rst
    create_data_frames/README.rst
    dashboard/README.rst
+   hall_of_fame.rst
    links.rst
 
 Challenges
