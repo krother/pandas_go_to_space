@@ -32,7 +32,7 @@ Diplomacy
       poksYHCokwxprrr pokYLOzUFprrr pokTLOuprrr pukOBuhRdprrr
       puksvWuiZMYmpIQNfgyprrr purPxOuoYLEprrr puksYtlOHPWprrr
    
-   Your translation computer quickly starts analyzes the penguin language.
+   Your translation computer quickly starts analyzing the penguin language.
    Let's find out what the penguins have to say.
 
 ----
@@ -74,26 +74,26 @@ Slicing Strings
 ---------------
 
 Your translation computer found out that every word starts with a **glacial phoneme**.
-These are any of the syllables *"plo", "pok", "pur", "prt"* or *"puk"* describing the current temperature. Because your life support keeps temperature constant, you can ignore these for now.
+These are any of the syllables *"plo", "pok", "pur", "prt"* or *"puk"* describing the current temperature. Because your life support keeps temperature constant, you can ignore these.
 
 Let's remove the first three characters.
-We can use ``.str`` to do slicing:
+You can use ``.str`` to slice the strings in the entire column:
 
 .. code:: python
 
    df["words"].str[3:]
 
-Every word ends with the syllable *"prrr"*, and **arctic morpheme** which means something like *"it's cold here"*. This is obvious and can be ignored as well.
+Every word ends with the syllable *"prrr"*, an **arctic morpheme** which means something like *"it's cold here"*. This is obvious and can be ignored as well.
 
 Every second character is a *prosodial psychronic phoneme* which is quite important in a conversation with other penguins, but in interstellar diplomacy we can leave it out as well.
 
-Use the expression
+Insert numbers for *start, stop* and *step* into the slicing expression
+to get rid of all the morphemes and phonemes.
 
 .. code:: python
    
    df["words"].str[start:end:step]
    
-to get rid of all the morphemes and phonemes.
 Assign the result to a new column.
 
 ----
@@ -109,7 +109,7 @@ The methods ``.str.upper()`` and ``.str.lower()`` allow to change case for an en
    
    df["words"].str.lower()
 
-Because of our fur, the cold doesn't affect us that much.
+Because of our dense fur, the cold doesn't affect us much.
 Convert to everything to lower case.
 
 ----
@@ -159,6 +159,7 @@ Your translation computer has developed an algorithm that translates panda langu
 
 .. code:: python
 
+   import string
    from random import choice
    
    def random_char_gen():
@@ -174,6 +175,8 @@ Your translation computer has developed an algorithm that translates panda langu
        postfix = 'prrr'
        return prefix + chars + postfix
    
+   message = "..."
    words = [translate_pan_to_peng(w) for w in message.split()]
    translated = ' '.join(words)
-   
+
+**Write an aproppriate response and translate it to pingu-speak.**
