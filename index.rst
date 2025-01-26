@@ -37,8 +37,8 @@ Contents
    edit_columns/README.rst
    data_wrangling/README.rst
    plotting/README.rst
-   aggregation/README.rst
    descriptive_statistics/README.rst
+   aggregation/README.rst
    time_series/README.rst
    long_vs_wide/README.rst
    string_handling/README.rst

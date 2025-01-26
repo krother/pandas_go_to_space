@@ -11,9 +11,10 @@ Encounter with Penguins
    :shadow: lg
 
    You have finally found a colony of the legendary space penguins.
-   These creatures seem to be comfortable spending lots of time in water.
-   They also seem to be very resistant to cold. And they eat *fish*!
-   Moreover, the penguins seem to be rather intelligent.
+   They live on an icy planet with oceans and many islands.
+   The strange creatures seem to be comfortable spending lots of time in water.
+   They also seem to be very resistant to cold.
+   Moreover, the penguins seem to be an intelligent species.
    Establishing communications with them could be fun.
 
    But you decide to start with a preliminary scan of the colony:
@@ -28,8 +29,8 @@ Encounter with Penguins
 The goal of descriptive Statistics
 ----------------------------------
 
-Once your data is tidy and you have created a few exploratory plots, you usually want to describe your data in more detail. This is where Descriptive Statistics come in. This is an obligatory step whenever you are working with data whether you want to deliver an expert opinion, train a fully automated Machine Learning algorithm or monitor data in production.
-Statistics go very deep sometimes, but you can safely start with a few metrics. You find an overview here.
+Once your data is tidy and you have created a few exploratory plots, you usually want to describe your data in more detail. This is where **Descriptive Statistics** come in. This is an obligatory step whenever you are working with data whether you want to deliver an expert opinion, train a fully automated Machine Learning algorithm or monitor data in production.
+Statistics go very deep sometimes, but you can safely start with a few straightforward metrics. You find an overview here.
 
 A good step to start with is to **write down questions** you are interested in.
 E.g.:
@@ -53,6 +54,12 @@ The arithmetic mean
 +++++++++++++++++++
 
 The **arithmetic mean** is the sum of all data points divided by their number:
+
+.. math::
+
+   \bar x = \frac{1}{n} \sum_i (x_i)
+   
+It can be calculated in a single line:
 
 .. code:: python3
 
@@ -80,7 +87,9 @@ The **median** sorts the data points and then takes the point in the middle (or 
     df["bill_length_mm"].median()
 
 The median is less prone to outliers than the mean.
-Try adding a godzilla-sized penguin to the list and see how both metrics change.
+Try adding a godzilla-sized penguin to the list and see how both metrics change:
+
+    df.loc[1, "bill_length_mm"] = 2000
 
 ----
 
@@ -95,7 +104,7 @@ It makes more sense if your variable is an **integer, ordinal or category value*
     df["species"].mode()
 
 In a scalar variable, you would also want to check if there are multiple modes.
-Use the histogram for that:
+A good tool for checking modes is the histogram:
 
 .. code:: python3
 
@@ -104,8 +113,8 @@ Use the histogram for that:
 
 ----
 
-Measures of Spread
-------------------
+Measures of Dispersion
+----------------------
 
 The second aspect of a single variable is how much it is spread around the center. Again, you have several options that are complimentary:
 
@@ -127,7 +136,7 @@ A metric less prone to outliers is the **standard deviation**, or the square roo
 
     sd = \sqrt{\frac{1}{n} \sum_i (x_i - \bar x)^2}
 
-An intuitive description of the standard deviation is that roughly 67% of the values are within one standard deviation from the mean, assuming a **normal distribution** (sorry it does not get more intuitive than that).
+An intuitive description of the standard deviation is that roughly 68% of the values are within one standard deviation from the mean, assuming a **normal distribution** (sorry it does not get more intuitive than that).
 
 .. code:: python3
 
@@ -154,12 +163,10 @@ Distributions
 A key question in the first two parts is: *Does my data consist a homogeneous group or does it really consist of two major sub-groups.*
 Without going into the details of testing statistical hypotheses (which is very difficult to do right) you may want to start with examining the histogram of a variable. What you want to check is:
 
-* is there more than one group (monodal, bimodal or multimodal distribution)?
+* is there more than one group (monomodal, bimodal or multimodal distribution)?
 * is there a predominant distribution?
 
 You should be able to distinguish the following distributions visually: uniform, normal, standard normal and power-law (long tail) distribution.
-
-We will examine them more closely in a later chapter.
 
 ----
 
@@ -172,8 +179,6 @@ Sometimes it is easier to analyze data if you transform it before analyzing. Nor
 * scaling the data to values from 0.0 to 1.0
 * scaling the data to a standard normal distribution (mean 0.0 and standard deviation 1.0)
 * taking the binary or decadic logarithm of all values
-
-We will look at normalizations in a later chapter more closely as well.
 
 ----
 
@@ -261,4 +266,26 @@ This is why **domain expertise** is indispensible!
 
 ----
 
-.. include:: seven_lines_descriptive.rst
+
+Challenge
+---------
+
+.. card::
+   :shadow: lg
+
+   Examine the scanned data of the penguin colony.
+
+   .. code:: python3
+
+      import seaborn as sns
+
+      df = sns.load_dataset('penguins')
+
+   Answer the following questions:
+   
+   1. calculate the total weight of all penguins
+   2. calculate the mean flipper length over all penguins
+   3. calculate the median flipper length over all penguins
+   4. calculate the standard deviation of the flipper length
+   5. calculate the correlation between flipper length and body mass
+   6. calculate min, max and quartiles over all columns
