@@ -1,5 +1,5 @@
-Crosstables and Pivoting
-========================
+Long vs Wide Format
+===================
 
 .. figure:: long_vs_wide.png
    :alt:

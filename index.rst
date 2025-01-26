@@ -38,12 +38,13 @@ Contents
    data_wrangling/README.rst
    plotting/README.rst
    descriptive_statistics/README.rst
-   aggregation/README.rst
+   pivots/README.rst
    time_series/README.rst
-   long_vs_wide/README.rst
    string_handling/README.rst
    plotting_maps/README.rst
    create_data_frames/README.rst
+   long_vs_wide/README.rst
+   aggregation/README.rst
    dashboard/README.rst
    hall_of_fame.rst
    links.rst

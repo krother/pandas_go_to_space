@@ -26,7 +26,7 @@ Encounter with Penguins
       df = sns.load_dataset("penguins")
 
 
-The goal of descriptive Statistics
+The Goal of Descriptive Statistics
 ----------------------------------
 
 Once your data is tidy and you have created a few exploratory plots, you usually want to describe your data in more detail. This is where **Descriptive Statistics** come in. This is an obligatory step whenever you are working with data whether you want to deliver an expert opinion, train a fully automated Machine Learning algorithm or monitor data in production.

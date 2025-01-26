@@ -104,7 +104,3 @@ Recap
 .. seealso::
 
    -  `Dunder Data Challenges <https://mybinder.org/v2/gh/DunderData/Dunder-Data-Challenges/master>`__
-
-----
-
-.. include:: seven_lines_aggregation.rst

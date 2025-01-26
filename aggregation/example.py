@@ -2,11 +2,6 @@ import seaborn as sns
 
 df = sns.load_dataset("penguins")
 
-
-# use a predefined aggregation function
-df["body_mass_g"].mean()
-
-
 # calculate the average body mass by species
 df.groupby("species")["body_mass_g"].mean()
 
