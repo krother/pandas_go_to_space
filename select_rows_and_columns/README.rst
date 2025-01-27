@@ -132,17 +132,22 @@ Challenge
    Select rows from the crew roster :download:`crew.csv` to find your five officers.
    You have a couple of hints:
    
-   * the **Helmspanda** (responsible for steering the ship) has the **id 247**.
-   * the **Data Science Officer** (responsible for DS of course) has **more than 18 white spots. They also have their ears dyed in indigo**.
-   * the **Paw Plant** (responsible for the reactor and engines) has an **id between 100 and 199**.
-   * the **Bamboo Chef** (responsible for nutrition) has **their ears dyed in chartreuse. They have fewer white spots than the paw plant**.
-   * the **Pandalorian** (responsible for weapons and tactics) has an **unknown ear color**. They wear a helmet all the time.
    * all of your officers have **at least 12 white spots**.
    * three of your officers have **exactly 9 black spots**.
-   * none of your officers has their **ears dyed blue**.
+   * none of your officers has **white ears** or **black ears**.
+   * the **Helmspanda** (responsible for steering the ship) has the **id 247**.
+   * the **Data Science Officer** (responsible for DS of course) has **more than 18 white spots. They also have their ears dyed in indigo**.
+   * the **Paw Plant** (responsible for the reactor and engines) has more white spots than the Pandalorian.
+   * the **Pandalorian** (responsible for weapons and tactics) has an **unknown ear color**. They wear a helmet all the time.
+   * the **Bamboo Chef** (responsible for nutrition) has **their ears dyed in chartreuse. They have fewer white spots than the paw plant**.
    
    **Identify all five of them.**
-   
+
+.. dropdown:: How many white spots do your officers have in total?
+   :animate: fade-in
+
+   There should be exactly 79.
+
 ----
 
 .. dropdown:: How was the crew data generated?
@@ -151,7 +156,3 @@ Challenge
    Below you find the code to generate the data in :download:`crew.csv`:
 
    .. literalinclude:: crew_generator.py
-
-----
-
-.. include:: seven_lines_filter.rst
