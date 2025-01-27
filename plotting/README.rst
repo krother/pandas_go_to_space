@@ -43,7 +43,7 @@ Make sure the data you are using is clean and consistent:
 * few missing values
  
 Pandas by default kicks out rows with missing data when plotting, but for your final plots you want to be firmly in control.
-Here is a clean version of the planets in **panda sector:** :download:`../read_write_data/panda_sector.csv`
+Here is a clean version of the planets in **panda sector:** :download:`panda_sector.csv <../read_write_data/panda_sector.csv>`
 
 .. code:: python
 
@@ -184,6 +184,6 @@ Challenge
 
    **data:**
    
-   - :download:`../read_write_data/panda_sector.csv`
-   - :download:`../read_write_data/penguin_sector.csv`
-   - :download:`../read_write_data/amoeba_sector.csv`
+   - :download:`panda_sector.csv <../read_write_data/panda_sector.csv>`
+   - :download:`penguin_sector.csv <../read_write_data/penguin_sector.csv>`
+   - :download:`amoeba_sector.csv <../read_write_data/amoeba_sector.csv>`
