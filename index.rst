@@ -34,13 +34,13 @@ Contents
    read_write_data/README.rst
    inspect_data_frames/README.rst
    select_rows_and_columns/README.rst
-   edit_columns/README.rst
    data_wrangling/README.rst
    plotting/README.rst
    descriptive_statistics/README.rst
    pivots/README.rst
-   time_series/README.rst
+   edit_columns/README.rst
    string_handling/README.rst
+   time_series/README.rst
    plotting_maps/README.rst
    create_data_frames/README.rst
    long_vs_wide/README.rst

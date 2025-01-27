@@ -9,18 +9,17 @@ Edit columns
 
    **Planetary Descent**
 
-   Todays mission is to examine the vegetation of a newly discovered **class M planet**.
-   Because your ship is not equipped with teleportation, your researchers will have to take a shuttle to the surface.
+   Finally you decide to land on the planet of the mysterious penguins.
+   Because your ship is not equipped with teleportation, your delegation will have to take a shuttle to the surface.
    Your job is to bring them down safely.
 
-   * Currently, your ship (and the shuttle) is orbiting in an altitude of **500km**.
-   * Once the shuttle leaves orbit, the planets gravity accelerates the shuttle constantly by :math:`9.81 \frac{m}{s^2}`.
-   * At an arbitrary moment, the shuttle can **activate its thrusters**. The thrusters thrust with an acceleration of :math:`10.0-100.0\frac{m}{s^2}`.
-   * You cannot deactivate the thrusters or change their strength (this produces a lot of cleanup work and is reserved for emergencies).
-   * To reach your destination on the surface, you want to reach the surface within **1500 seconds**.
+   * Currently, your ship (and the shuttle) is orbiting in an altitude of **1000 km**.
+   * Once the shuttle leaves orbit, the planets gravity accelerates the shuttle constantly by :math:`10.00 \frac{m}{s^2}`.
+   * At any moment, you can **activate the thrusters** with an acceleration of :math:`10.0-100.0\frac{m}{s^2}`.
+   * You can change the strength of the thrusters or deactivate them 
+   * Reach an altitude **and** speed of exactly 0 to safely land on the surface.
   
-   When should you activate the thrusters and how strong should they be?
-   Let's simulate the landing to find out!
+   Let's simulate the landing to find a good timing for activating the thrusters.
 
 ----
 
@@ -28,14 +27,14 @@ Create a DataFrame with a single column
 ---------------------------------------
 
 Simulate the ships' altitude over time with a resolution of one second.
-Start by creating the time as a column:
+Start by creating the time as a column. 1000 seconds should be enough:
 
 .. code:: python
 
    import pandas as pd
    import numpy as np
 
-   seconds = np.arange(1500, dtype=np.int32)
+   seconds = np.arange(1000, dtype=np.int32)
    df = pd.DataFrame({'seconds': seconds})
 
 The dictionary format in the parentheses allows you to define a DataFrame with multiple columns as well.
@@ -56,7 +55,7 @@ Because the gravity does not change, we create a new column and fill it up with 
 
 .. code:: python
 
-   df['gravity'] = 9.81
+   df['gravity'] = 10.00
 
 For the thrust, we create a new column, settting all values to zero:
 
@@ -76,19 +75,17 @@ If you re-assign to an existing column, the old column gets replaced.
 
 ----
 
-Modify the contents of a column
--------------------------------
+Modify a column
+---------------
 
 Now we need to switch on the thrusters.
-
-Fill up the bottom part of the `thrust` column with the thruster strength.
-The `df.loc` allows you to access a part of a column:
+Use `df.loc` to fire the thrusters for a given time period:
 
 .. code:: python
 
-   activation_time = 500  # after 500 seconds
-   strength = 50.0        # must be between 10.0-100.0
-   df.loc[activation_time:, 'thrust'] = strength
+   df.loc[500:600, 'thrust'] = 100
+
+This will activate the thrusters from second 500 to 600 with a strength of 100.
 
 ----
 
@@ -107,12 +104,24 @@ To calculate the speed, we need to add all acceleration values up to a given row
 
    df['speed'] = df['acceleration'].cumsum()
 
-Any calculation may include constant values.
-They are applied to every row.
+Inspect the data with ``df.head()`` to see the effect of the ``.cumsum()`` method.
+
+Adding up the speed column lets you calculate the altitude:
 
 .. code:: python
 
-   df['altitude [km]'] = 500 - (df['speed'].cumsum() / 1000)
+   df['altitude'] = 1000 - (df['speed'].cumsum() / 100)
+
+
+.. dropdown:: Shouldn't we use differential calculus to solve this problem?
+   :animate: fade-in
+
+   The pandas spaceship is equipped with quantum displacement technology that
+   dynamically modifies the Planck constant. So technically, the ship is performing
+   a series of very small jumps in space-time. 
+   
+   A side effect of this is that the acceleration gently strokes your fur while the ship is
+   descending and you would not want to mess with that.
 
 ----
 
@@ -132,6 +141,19 @@ The `inplace=True` modifies the DataFrame.
 
 ----
 
+Zooming in
+----------
+
+To highlight the area with the lowest altitude, you can use the following code:
+
+.. code:: python
+
+   lowest = df[df["altitude"] == df['altitude'].min()]
+   df.iloc[:lowest.index[-1] + 5].tail(10)
+
+
+----
+
 Visualize the descent
 ---------------------
 
@@ -143,7 +165,7 @@ We add a horizontal line to indicate the surface.
 
    from matplotlib import pyplot as plt
 
-   df['altitude [km]'].plot()
+   df['altitude'].plot()
    plt.hlines(xmin=0, xmax=1500, y=0.0, color="red")
 
 
@@ -153,7 +175,7 @@ We can show both columns in a line plot, but need to switch to a log-scale
 
 .. code:: python
 
-   ax = df[['altitude [km]', 'speed']].plot()
+   ax = df[['altitude', 'speed']].plot()
    ax.set_yscale('log')
 
 When you see that your altitude goes through the floor of the log plot, it means that the spaceship would crash into the planet.
@@ -169,7 +191,19 @@ Challenge
 .. card::
    :shadow: lg
 
-   Once you reach an altitude of **less than 100 m** and a speed of **less than 100 m/s**,
-   you can activate the **anti-gravitational landing gear** that will finish the landing automatically.
+   Once you reach an altitude of exactly **0 m** and a speed of exactly **0 m/s**,
+   your **anti-gravitational landing gear** will finish the landing automatically.
 
-   Find out values for **activation_time** and **strength**.
+   Add as many thruster activations as you need using the pattern:
+
+   .. code:: python
+
+      df.loc[start_time:end_time, 'thrust'] = strength
+
+   The following code checks whether the landing was successful:
+
+   .. code:: python
+
+      lowest = df[df["altitude"] == df['altitude'].min()].iloc[-1]
+      if lowest['altitude'] == 0 and lowest['speed'] == 0:
+          print("landing successful!")
