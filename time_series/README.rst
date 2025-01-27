@@ -4,28 +4,34 @@ Time Series
 
 .. figure:: reactor.jpeg
 
-Reactor Trouble
----------------
+Gravity Rift
+------------
 
 .. card::
    :shadow: lg
 
    **Alert!** The anti-matter reactor of the ship has become unstable.
-   High-energy particles start drifting in random directions.
-   As it is the matter with anti-matter, it might easily turn your ship into a fireball if the particle displacement becomes too large.
+   High-energy particles drift in random directions.
+   You manage to avoid turning your ship into a fireball by throwing the anti-matter out through a hatch just in time.
+   As it is the matter with anti-matter, it messes with the time-space continuum.
+
+   In this case, it creates a gravity rift that sucks you in.
+   Your ship pops out in a completely different space and time, next to a habitable planet.
+   Judging by the air pollution, you ended up in the early 21st century.
+
+   Fortunately, you should be able to make it back from this barbaric place.
+   All you need to do is to find out when the gravity displacement is the biggest.
+   Then, you should be able to open another rift and jump back to your own world.
+
+   You find the gravity displacement data over time in :download:`gravity.csv`.
    
-   Fortunately your engineers say this should be easy to fix.
-   All you need to do is to measure the displacement over time and recalibrate the reactor.
+   Use the local time system to calibrate the time.
 
-   Here is the data:
-   
-   .. code:: python3
 
-      import numpy as np
+.. dropdown:: The pollution phrase looks familiar. Who is it from?
+   :animate: fade-in
 
-      displacement = np.random.normal(size=200)
-
-----
+   This is a reference to the legendary Leonard Nimoy in `Star Trek IV: The Voyage Home <https://en.wikipedia.org/wiki/Star_Trek_IV:_The_Voyage_Home>`__
 
 Create a Time Series
 --------------------
@@ -193,4 +199,45 @@ Try different window sizes and see how the curve becomes smoother and smoother.
 
 ----
 
-.. include:: seven_lines_datetime.rst
+
+Challenge
+---------
+
+.. card::
+   :shadow: lg
+
+   To find out when you need to jump back, solve the following tasks:
+
+   1. create timestamps for an entire year (2025), one per day
+
+   2. create a ``pd.Series`` with the gravity and the timestamps as index
+
+   3. display the weekday for each timestamp. On Sunday, your chef will be cooking bamboo with mushrooms, so no time travel on that day.
+
+   4. select the data after January. Time traveling before January is strictly forbidden.
+
+   5. calculate the sum of all gravity displacements for each of the remaining 11 months
+
+   6. calculate a rolling average with a 7-day window.
+
+   7. plot the rolling average data. The day with the highest average is where you should time-travel.
+
+
+.. dropdown:: How to create time-rift data?
+   :animate: fade-in
+
+   Here is the code. Use it at your own risk!
+
+   .. code:: python3
+
+      import numpy as np
+      import pandas as pd
+      from matplotlib import pyplot as plt
+
+      noise = np.random.normal(size=365)
+
+      x = np.linspace(0, 40, 365)
+      y = np.sin(x)
+      yy = y + noise
+      s = pd.Series(yy)
+      s.to_csv("gravity.csv")
