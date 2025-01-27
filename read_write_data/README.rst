@@ -19,9 +19,9 @@ Read and Write Data
 
    :download:`panda_sector.csv`
 
-   :download:`penguin_sector.csv`
+   :download:`penguin_sector.xlsx`
 
-   :download:`amoeba_sector.csv`
+   :download:`amoeba_sector.json`
 
 ----
 
@@ -35,7 +35,7 @@ of optional parameters, three of which are shown here:
 
    import pandas as pd
 
-   df = pd.read_csv('penguin_sector.csv', index_col=0, sep=',', header=0)
+   df = pd.read_csv('panda_sector.csv', index_col=0, sep=',', header=0)
 
 ``df`` is a **DataFrame**, a fundamental data structure in pandas.
 For most practical matters, it works like a table.
@@ -110,7 +110,7 @@ Reading JSON only works if the structure is table-like.
 
 .. code:: python
 
-   df = pd.read_json('penguins.json') 
+   df = pd.read_json('amoeba_sector.json') 
 
 ----
 
