@@ -31,8 +31,8 @@ Like pandas, duckdb can read data directly from CSV files and other formats.
 
     import duckdb
     
-    t = duckdb.read_csv("panda_sector.csv", index_col=0)
-    df = t.to_df()
+    panda_sector = duckdb.read_csv("panda_sector.csv", index_col=0)
+    df = panda_sector.to_df()
 
 SQL Queries
 -----------
@@ -43,8 +43,12 @@ With SQL, you can answer questions to the data:
 
     duckdb.sql("SELECT * FROM 'panda_sector.csv' WHERE class='M'")
     duckdb.sql("SELECT name,size FROM 'panda_sector.csv' WHERE class='M' AND size> 10 ORDER BY name LIMIT 10")
-    duckdb.sql("SELECT * FROM t LIMIT 5")
-    duckdb.sql("SELECT * FROM t LIMIT 5").df()
+
+Note that you can refer to tables by the file path or by a Python variable name:
+
+.. code:: python3
+
+    duckdb.sql("SELECT * FROM panda_sector LIMIT 5").df()
   
 Store the Database in a file
 ----------------------------
@@ -56,7 +60,6 @@ Lets' make it persistent:
 
     con = duckdb.connect("starbase.db")
     con.read_csv("panda_sector.csv")
-    con.sql("CREATE TABLE dummy FROM 'panda_sector.csv')
     con.sql("CREATE TABLE dummy AS SELECT * FROM 'panda_sector.csv' LIMIT 5")
     con.close()
   
@@ -71,5 +74,3 @@ Now you should see a file `starbase.db` .
 .. seealso::
 
    `https://duckdb.org/docs/api/python/dbapi <https://duckdb.org/docs/api/python/dbapi>`__
-
-

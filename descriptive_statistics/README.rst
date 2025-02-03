@@ -89,6 +89,8 @@ The **median** sorts the data points and then takes the point in the middle (or 
 The median is less prone to outliers than the mean.
 Try adding a godzilla-sized penguin to the list and see how both metrics change:
 
+.. code:: python3
+
     df.loc[1, "bill_length_mm"] = 2000
 
 ----
