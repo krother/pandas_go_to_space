@@ -78,6 +78,11 @@ There is one subtle difference though: if your column labels are numbers, they a
 
    df = pd.read_excel('penguin_sector.xlsx', index_col=0)
 
+.. note::
+
+   You may need to install an extra library to read Excel files.
+   Please follow the instructions in the output.
+
 ----
 
 Read SQL
@@ -134,6 +139,26 @@ it is sometimes straightforward to combine them into a single `DataFrame`:
 .. code:: python
 
    df = pd.concat([df1, df2, df3, ...])
+
+----
+
+Writing Files
+-------------
+
+For writing a DataFrame to an output file, there is an equivalent set of functions:
+
+.. code:: python
+
+   df.to_csv("planets.csv")
+   df.to_csv("planets.csv", index=False)  # do not write the index column
+
+   df.to_excel("planets.xlsx")
+   
+   df.to_json("planets.json")
+
+.. seealso::
+
+   `Serialization methods in pandas DataFrames <https://pandas.pydata.org/docs/reference/frame.html#serialization-io-conversion>`__
 
 ----
 
