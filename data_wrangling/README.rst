@@ -34,17 +34,34 @@ to sort by more than one column, try:
 
 .. code:: python
 
-   df.sort_values(by=["category", "units"], ascending=[True, False], inplace=True)
+   df.sort_values(by=["category", "type"], ascending=[True, False], inplace=True)
 
 
 Change the data type
 --------------------
 
-Convert values to a string:
+Convert values to strings:
 
 .. code:: python
 
-   df['mass'] = df['body_mass_g'].astype(str) + 'g'
+   df["crate_str"] = df["crate_no"].astype(str)
+
+You can easily combine multiple columns using standard operators:
+
+.. code:: python
+
+   df["crate_id"] = df["crate_no"].astype(str) + df["crate_shelf"]
+
+Create new rows
+---------------
+
+If you have Python sequence types (lists, tuples, sets), you can assign them to new columns directly.
+The only prerequisite is that the length matches that of your DataFrame:
+
+.. code:: python
+
+   deck = [d for _,d in zip(range(df.shape[0]), cycle("123"))]  # repeat 1,2,3,1,..
+   df["deck"] = deck 
 
 Set the index column
 --------------------
@@ -54,27 +71,27 @@ differently by many operations in pandas.
 
 .. code:: python
 
-   # put the species column in the index
-   df_species = df.set_index('species')
+   # put the new crate_id column in the index
+   crates = df.set_index('crate_id')
 
-   # now you can select by species easily:
-   df_species.loc['Gentoo']
+   # now you can select by crate_id easily:
+   crates.loc['13A']
 
 Note that the ``inplace=True`` parameter modifies the DataFrame instead
 of returning a new one:
 
 .. code:: python
 
-   df.set_index('species', inplace=True)
+   df.set_index('crate_id', inplace=True)
 
-This notation is more memory-efficient, but it is more tricky in Jupyter
-notebooks (e.g. when you run that line twice you get different results.
+The `inplace=True` notation is more memory-efficient, but it is more tricky in Jupyter
+notebooks (e.g. when you run that line twice you get different results.
 
 To move the index to a regular column, use:
 
 .. code:: python
 
-   df_reset = df.reset_index()  # inserts a numerical index
+   df_reset = df.reset_index()  # inserts a numerical index starting from 0
 
 Missing values
 --------------
@@ -124,8 +141,8 @@ back to a ``for`` loop over all the rows.
 
 .. code:: python
 
-   for index, row in df.iterrows(): 
-       print(index, row['body_mass_g'])
+   for index, row in df.iterrows():
+       print(index, row['type'])
 
 
 .. figure:: bamboo.jpg
